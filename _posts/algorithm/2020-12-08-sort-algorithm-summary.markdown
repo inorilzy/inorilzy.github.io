@@ -29,3 +29,33 @@ def bubble_sort(arr):
         if not exchange: # 如果没有发生交换，说明数组默认有序。跳出循环
             break
 ```
+
+## Quick-Sort
+```
+def quick_sort(arr, left, right):
+    if left < right:
+        p = partition(arr, left, right)
+        quick_sort(arr, left, p - 1)
+        quick_sort(arr, p+1, right)
+
+
+def partition(arr, left, right):
+    key = arr[left]
+    while left < right:
+        while left < right and arr[right] >= key:
+            right -= 1
+        arr[left] = arr[right]
+        while left < right and arr[left] <= key:
+            left += 1
+        arr[right] = arr[left]
+    arr[left] = key
+    return left
+
+
+if __name__ == '__main__':
+    L = [5, 9, 1, 11, 6, 7, 2, 4]
+    quick_sort(L, 0, len(L)-1)
+    print(L)
+
+
+```
