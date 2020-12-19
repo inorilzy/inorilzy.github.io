@@ -30,6 +30,9 @@ def bubble_sort(arr):
             break
 ```
 ## Insert-Sort
+思路：将序列看成两部分 前面有序，再从后面去一个插入到前面有序队列的对应位置
+参考：https://www.bilibili.com/video/BV1Ly4y1B7fy?from=search&seid=5866228426019660095
+
 ```
 def insert_sort(arr):
     for i in range(1,len(arr)):
