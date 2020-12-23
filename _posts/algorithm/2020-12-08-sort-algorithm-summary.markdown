@@ -5,7 +5,7 @@ date:   2020-12-08 00:09:42 +0800
 categories: algorithm
 ---
 
-![alt 排序](../../assert/images/sort.png)
+![alt 排序](../_images/sort.png)
 
 ## Bubble-Sort
 #### 基础版本：
