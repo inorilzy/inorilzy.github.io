@@ -1,0 +1,18 @@
+---
+title: 重装系统后安装 jekyll 遇到的问题
+date: 2023-06-18 14:01:06 +0800
+categories: [写笔记相关]
+tags: []
+---
+
+## ERROR: Failed to build gem native extension.
+
+很奇怪，搜来搜去搜到 [github Issus](https://github.com/jekyll/jekyll/issues/7000) 里面，有人说 ruby 安装路径不能有空格，windows 默认安装在 C 盘根目录，我第一次安装的时候给改到 
+C:/Programs Files 里面去了， 重新安装 ruby 到 C 盘根目录解决。
+
+
+## bundle install 无响应
+
+原因是 bundle 没使用国内镜像，貌似 和 gem 使用的不是用一个镜像，因为我 gem 的源已经改了，我就以为 bundle 也可以使用修改后的国内源，没想到
+输入命令回车之后什么都没有，等几分钟还是什么都没有，开发人员也不加个超时报错，害我傻傻等半天。最后搜索通过如下命令解决：  
+`$ bundle config mirror.https://rubygems.org https://gems.ruby-china.com`
