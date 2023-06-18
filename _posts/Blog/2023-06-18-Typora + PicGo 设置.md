@@ -1,7 +1,7 @@
 ---
 title: Typora + PicGo 设置
 date: 2023-06-18 17:31:06 +0800
-categories: [写笔记]
+categories: [Blog]
 tags: []
 ---
 
