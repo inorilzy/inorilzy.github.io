@@ -1,4 +1,9 @@
-
+---
+title: Yarn 创建 Vite + Vue3 项目
+date: 2024-06-18 15:56:06 +0800
+categories: [前端, Vue3, Vite]
+tags: []
+---
 
 使用 Yarn 创建一个 Vite + Vue 3 项目非常简单。以下是详细的步骤：
 
