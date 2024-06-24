@@ -6,7 +6,7 @@ categories: [数据结构和算法]
 
 一些排序，方便随时查看！
 
-<img src="https://cdn.jsdelivr.net/gh/inorilzy/blog-img/sort202305091836213.png"/>
+![sort_algorithm](https://cdn.jsdelivr.net/gh/inorilzy/blog-img/sort202305091836213.png)
 
 ## Bubble-Sort
 #### 基础版本：
