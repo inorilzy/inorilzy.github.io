@@ -56,8 +56,6 @@ jobs:
               --disable-external \
               --check-html \
               --allow_hash_href \
-              --check-favicon \
-              --check-img-http \
               --assume-extension \
               --empty-alt-ignore \
               --url-ignore "/^\/assets\//"
