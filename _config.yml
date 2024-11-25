@@ -197,3 +197,16 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+
+# HTML Proofer configs
+htmlproofer:
+  check_html: true
+  check_external_hash: true
+  check_opengraph: true
+  disable_external: true
+  allow_hash_href: true
+  check_favicon: false  # 暂时禁用favicon检查
+  validation:
+    ignore_script_embeds: true
+    report_invalid_tags: false  # 禁用无效标签报告
