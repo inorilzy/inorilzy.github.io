@@ -308,3 +308,34 @@ mysql -u newuser -p -h your_mysql_server_ip
 
 - 服务启动脚本：`/etc/init.d/mysql`
 - 使用`systemctl`管理服务：`sudo systemctl start mysql`、`sudo systemctl status mysql`等。
+
+### 一些异常报错：
+
+```
+ERROR 1524 (HY000): Plugin 'auth_socket' is not loaded
+```
+
+这个错误是因为MySQL使用了auth_socket认证插件。让我们按步骤解决：
+
+1. 首先查看当前认证方式：
+
+   ```
+   SELECT user, plugin, host FROM mysql.user WHERE user='root';
+   ```
+
+   
+
+2. 修改认证方式和密码：
+
+```sql
+UPDATE mysql.user SET 
+    plugin='mysql_native_password',
+    authentication_string=NULL 
+WHERE User='root';
+
+FLUSH PRIVILEGES;
+
+-- 然后设置新密码
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1qaz@WSX';
+```
+
