@@ -9,6 +9,8 @@ tags: [uv]
 
 ### 如何在 Linux 上快速安装 python 新版本
 
+#### 1. 使用 ppa 仓库
+
 如果 `apt` 没有提供你需要的最新版本的 Python，你可以通过添加 PPA（Personal Package Archive）来安装。以下是使用 PPA 安装最新 Python 版本的步骤：
 
 1. **更新包列表**：
@@ -60,13 +62,14 @@ tags: [uv]
 
 通过以上步骤，你就可以使用 PPA 安装最新版本的 Python。请注意，使用 PPA 可能会引入不稳定的版本，因此在生产环境中使用时要谨慎。
 
-1.  使用 uv 安装
-   1. 使用自带的 python 安装 uv
-      - uv 会从 uv 开发者维护的 github 仓库拉取 python 编译后的安装包，如果服务器没有使用代理，会拉取失败
-      - 从拉取失败中给的 url 下载 python 
-      - 使用 sftp 移动到服务器
-      - 找个文件夹放 ，如： /root/20241016/cpython-3.13.0+20241016-x86_64-unknown-linux-gnu-freethreaded+pgo+lto-full.tar.zst , 后面这个20241016 是 下载失败 url 中的路径
-      - uv python install cpython-3.13.0+freethreaded-linux-x86_64-gnu --mirror file:///root
+#### 2. 使用 uv 安装
+
+1. 使用自带的 python 安装 uv
+2. uv 会从 uv 开发者维护的 github 仓库拉取 python 编译后的安装包，如果服务器没有使用代理，会拉取失败
+3. 从拉取失败中给的 url 下载 python 
+4. 使用 sftp 移动到服务器
+5. 找个文件夹放 ，如： /root/20241016/cpython-3.13.0+20241016-x86_64-unknown-linux-gnu-freethreaded+pgo+lto-full.tar.zst , 后面这个20241016 是 下载失败 url 中的路径
+6. uv python install cpython-3.13.0+freethreaded-linux-x86_64-gnu --mirror file:///root
 
 ### uv sync 如何使用国内源
 
