@@ -3,6 +3,9 @@
 source "https://rubygems.org"
 gem "jekyll", "~> 4.3.3"
 gem "webrick", "~> 1.8"
+gem "csv"
+gem "logger"
+gem "base64"
 
 gem "jekyll-theme-chirpy", "~> 6.0", ">= 6.0.1"
 
